@@ -7,7 +7,8 @@ I consider briefly investigating the case that:
 Leptophobic Spin-1 mediated DM:
 the same as Eq. (5) Lagrangian in
 https://arxiv.org/abs/1908.06357
-{\cal L}^{Z'}_{\mathrm{int}} = \overline{\psi}\gamma^{\mu}(g^V_\psi +g^A_\psi \gamma_5) \psi {Z'_{\mu}}
+
+\overline{\psi}\gamma^{\mu}(g^V +g^A\gamma_5)\psi Z'_{\mu}
 
 I planned to let you implement the above Lagrangian with \psi in the above DM and up and down quarks for simplicity.
 You can easily extend this to the one with more quarks and/or leptons.
