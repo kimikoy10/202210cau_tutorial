@@ -5,7 +5,7 @@ Let me introduce the outline.
 I consider briefly investigating the case that:
 
 Leptophobic Spin-1 mediated DM:
-the same as Eq. (5) Lagranagian in
+the same as Eq. (5) Lagrangian in
 https://arxiv.org/abs/1908.06357
 
 I planned to let you implement the above Lagrangian with \psi in the above DM and up and down quarks for simplicity.
