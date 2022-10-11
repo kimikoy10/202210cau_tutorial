@@ -1,0 +1,129 @@
+(* ****************************************************************** *)
+(* *****  FeynRules model file TEMPLATE in this tutorial	***** *)
+(* *****  You can find out the answer to this tutorial from:    ***** *)
+(* ****	  https://feynrules.irmp.ucl.ac.be/wiki/DMsimp 		***** *)
+(* ***	  							***** *)
+(* *****  FeynRules model file: Simplified DM models            ***** *)
+(* *****                        s-channel spin-1 mediator       ***** *)
+(* *****  Author: A. Martini, K. Mawatari                       ***** *)
+(* *****          J. Wang, C.Zhang (EW)                         ***** *)
+(* *****          B. Zaldivar (lepton)                          ***** *)
+(* *****          B. Fuks (monotop)                             ***** *)
+(* *****                                                        ***** *)
+(* ****************************************************************** *)
+
+
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "";	      (* Please type the model name *)
+
+M$Information = {
+ Authors      -> {""},	(* Your name! *) 
+ Institutions -> {""},	(* Chung-Ang University *)
+ Emails       -> {""},	(* Your email address *)
+ URLs         -> "",	  
+ References   -> {""},
+ Version      -> "",	(* Type 1.0 *)
+ Date         -> ""	(* You may type: 2022.10.13 *)
+};
+
+(* ************************** *)
+(* *****  Change  log   ***** *)
+(* ************************** *)
+
+(* 2022.10.13 v1.0 - release version. !This is just a tutorial following the DMsimp model file that is written in the top!  *)
+
+(***** Setting for interaction order (as e.g. used by MadGraph 5)  ******)
+
+M$InteractionOrderLimit = {
+ {DMV, 2}
+};
+
+M$InteractionOrderHierarchy = {
+ {QCD, 1}, {DMV, 2}, {QED, 2}
+};
+
+
+(* ************************** *)
+(* *****     Fields     ***** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+F[7] == { ClassName -> Xd,
+          SelfConjugate -> , (* For Dirac DM, Please type False *)
+	  Mass -> {,},	(* Please type Mass symbol, default mass value*)
+          Width -> 0,
+          PDG -> 5000521,
+          TeX -> Subscript[X,d],
+          FullName -> "Dirac DM" },
+
+V[7] == { ClassName -> Y1,
+	  SelfConjugate -> True,
+	  Mass -> {MY1, 1000.},
+          Width -> {,}, (* Please type Width symbol, default total decay width value *)
+          PDG -> 5000001,
+          TeX -> Subscript[Y,1],
+          FullName -> "spin-1 mediator" }
+
+};
+
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)  
+M$Parameters = {
+
+ gVXd == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,VXd],
+      Description -> "Xd-Y1 vector coupling",
+      Value -> 1. },     	  
+
+ gAXd == { 
+      ParameterType -> ,	(* follow the above *)
+      InteractionOrder -> ,	(* follow the above *)
+      BlockName -> ,   	  	(* follow the above *)
+      TeX -> Subscript[],	(* follow the avove *)
+      Description -> "Xd-Y1 axial-vector coupling",
+      Value ->  }, 	    	(* please type the default value *)	      	  
+
+ gVd11 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vd11],
+      Description -> "d-Y1 vector coupling",
+      Value -> 0.25 },     
+
+(* please fill out the followings *)
+(* u-Y1 vector coupling *)
+ gVu11 == {
+ 
+      },
+      
+(* d-Y1 vector coupling *)
+ gAd11 == {
+ 
+      },
+      
+(* u-Y1 axial-vector coupling *)
+ gAu11 == {
+      } 
+};
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+(* Please fill out L1X by using Xdbar, Xd fields *)
+L1X := ;
+
+L1SM := dbar.Ga[mu].(gVd11 + gAd11 Ga[5]).d Y1[mu] +
+        ubar.Ga[mu].(gVu11 + gAu11 Ga[5]).u Y1[mu];
+	
+(* Please fill out the following: total interaction terms *)
+L1DM := ;
