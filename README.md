@@ -17,4 +17,4 @@ We can do as much as we can from and to:
 1) Making FeynRules file on spin-1 mediated DM: Implement the Lagrangian Eq. (5)
 2) MadGraph: p p to DM DM j (monojet) with the above file (generating events, see cross section)
 3) CalcHEP, amplitude squared: DM DM to u ubar, for example (for the relic density)
-4) MadAnalysis: with the output of item 2) we can see kinematic distributions
+4) MadAnalysis: with the output of item 2) we can see kinematical distributions
