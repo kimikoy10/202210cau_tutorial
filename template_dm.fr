@@ -86,7 +86,7 @@ M$Parameters = {
       ParameterType -> ,	(* follow the above *)
       InteractionOrder -> ,	(* follow the above *)
       BlockName -> ,   	  	(* follow the above *)
-      TeX -> Subscript[],	(* follow the avove *)
+      TeX -> Subscript[],	(* follow the above *)
       Description -> "Xd-Y1 axial-vector coupling",
       Value ->  }, 	    	(* please type the default value *)	      	  
 
