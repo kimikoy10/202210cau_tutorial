@@ -18,3 +18,9 @@ We can do as much as we can from and to:
 2) MadGraph: p p to DM DM j (monojet) with the above file (generating events, see cross section)
 3) CalcHEP, amplitude squared: DM DM to u ubar, for example (for the relic density)
 4) MadAnalysis: with the output of item 2) we can see kinematical distributions
+
+References:
+https://arxiv.org/abs/1908.06357
+https://feynrules.irmp.ucl.ac.be/wiki/DMsimp
+
+
