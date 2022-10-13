@@ -104,7 +104,7 @@ M$Parameters = {
  
       },
       
-(* d-Y1 vector coupling *)
+(* d-Y1 axial-vector coupling *)
  gAd11 == {
  
       },
